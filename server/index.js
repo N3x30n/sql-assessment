@@ -10,13 +10,14 @@ app.use(cors())
 
 // DEV
 app.post('/seed', seed)
+seed()
 
 // COUNTRIES
-// app.get('/countries', getCountries)
+app.get('/countries', getCountries)
 
 // CITIES
-// app.post('/cities', createCity)
-// app.get('/cities', getCities)
-// app.delete('/cities/:id', deleteCity)
+app.post('/cities', createCity)
+app.get('/cities', getCities)
+app.delete('/cities/:id', deleteCity)
 
 app.listen(SERVER_PORT, () => console.log(`up on ${SERVER_PORT}`))
